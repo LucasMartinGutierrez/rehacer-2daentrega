@@ -176,3 +176,11 @@ formula.addEventListener("submit", (e) =>{
     sectorTienda.innerHTML = "";
     carrito.splice(0, Infinity);
 });
+
+function cargarProductosDesdeLocalStorage(){
+    let carritoLocalStorage = [];
+    if (localStorage.length!=0){
+        carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
+    }
+    return carritoLocalStorage;
+};
